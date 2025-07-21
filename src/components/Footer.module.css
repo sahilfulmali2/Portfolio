@@ -1,10 +1,11 @@
-
 .footer {
   width: 100%;
   padding: 2rem 1.5rem;
   background: linear-gradient(135deg, #1f2937, #111827);
   color: #9ca3af;
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+  /* This is the fix 👇 */
+  box-sizing: border-box; 
 }
 
 .footerContent {
@@ -73,8 +74,15 @@
   width: 100%;
 }
 
+/* Media Query for larger screens */
 @media (min-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+    /* No need to change width or box-sizing here, it's inherited */
+  }
+  
   .footerContent {
+    width: 80%;
     flex-direction: row;
     justify-content: space-between;
   }

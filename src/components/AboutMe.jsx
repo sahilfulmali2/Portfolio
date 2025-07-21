@@ -37,6 +37,10 @@ const AboutMe = () => {
         <a href="https://www.linkedin.com/in/sahil-fulmali/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
           <i className="fab fa-linkedin"></i>
         </a>
+        <a href="https://leetcode.com/u/sahil_fulmali7/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile">
+    {/* Note: Font Awesome doesn't have a specific LeetCode icon, so 'fa-code' is used as a substitute. */}
+    <i className="fas fa-code"></i> 
+  </a>
       </div>
     </div>
   </div>

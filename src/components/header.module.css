@@ -96,7 +96,7 @@
 /* === Mobile Styles (The Fix is Here) === */
 @media (max-width: 639px) {
   .navbar_contain {
-    width: 95%; /* Keep the container width */
+    width: 350px; /* Keep the container width */
   }
 
   .lists ul {

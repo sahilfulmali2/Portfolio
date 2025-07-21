@@ -59,6 +59,7 @@
   border: 1px solid #30363d;
   border-radius: 8px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .formInput:focus,
@@ -126,4 +127,16 @@
   .contactForm {
     padding: 2rem;
   }
+  .formInput,
+.formTextarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #e6edf3;
+  background-color: rgba(13, 17, 23, 0.7);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 }

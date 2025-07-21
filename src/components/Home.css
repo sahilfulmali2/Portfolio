@@ -84,6 +84,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .home-section{
+    min-height: 80vh; /* Allow content to dictate height */
+  }
   .main-heading {
     font-size: 3.5rem;
   }
