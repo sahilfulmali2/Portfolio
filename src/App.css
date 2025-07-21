@@ -1,0 +1,15 @@
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #000000;
+  color: white;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+.home {
+  padding: 20px;
+}
+

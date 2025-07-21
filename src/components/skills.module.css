@@ -1,0 +1,100 @@
+/* src/components/skills.module.css */
+
+.skillsSection {
+  padding: 6rem 2rem;
+  /* Using the same background as the projects section for consistency */
+  background-color: #0d1117;
+  background-image:
+    radial-gradient(at 100% 100%, hsla(253, 16%, 7%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 1%, hsla(220, 26%, 13%, 1) 0px, transparent 50%);
+  position: relative;
+}
+
+.skillsContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #00e676; /* Accent color */
+  border-radius: 2px;
+}
+
+.skillsGrid {
+  display: grid;
+  /* Creates a responsive grid that fits as many items as possible */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.skillCard {
+  /* Frosted glass effect for each card */
+  background: rgba(22, 27, 34, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-10px);
+  background: rgba(33, 38, 45, 0.7);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.skillIcon {
+  font-size: 3.5rem; /* Large, clear icons */
+  color: #00e676;
+  margin-bottom: 0.5rem;
+}
+
+.skillName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .skillsSection {
+    padding: 4rem 1rem;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .skillIcon {
+    font-size: 3rem;
+  }
+  .skillName {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,202 @@
+/* === Base Styles (Desktop First) === */
+.aboutSection {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem; /* Adjusted padding for better balance */
+  background-image:
+    radial-gradient(at 100% 100%, hsla(253, 16%, 7%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 1%, hsla(220, 26%, 13%, 1) 0px, transparent 50%);
+  min-height: 100vh; /* Ensure it takes at least the full screen height */
+}
+
+.aboutContainer {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 2.75rem; /* Slightly reduced for better scaling */
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #00e676;
+  border-radius: 2px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* === Top Row: Image + Bio === */
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Reduced gap for tighter layout */
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px; /* Prevents image from shrinking too much */
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 320px; /* Slightly smaller max-width */
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  border: 3px solid #2d3748;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 230, 118, 0.2);
+}
+
+.textWrapper {
+  flex: 1.5; /* Gives text more space */
+}
+
+.bio {
+  font-size: 1.05rem; /* Adjusted for readability */
+  line-height: 1.7;
+  color: #a0aec0;
+  margin-bottom: 1.5rem;
+}
+
+.bio:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links a {
+  color: #a0aec0;
+  font-size: 1.75rem; /* Slightly smaller icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+  color: #00e676;
+  transform: translateY(-5px);
+}
+
+/* === Bottom Row: Education === */
+.educationWrapper {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.05); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.75rem;
+}
+
+.content p {
+  color: #a0aec0;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.degree {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+}
+
+.year {
+  font-size: 0.875rem;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.5rem;
+  background-color: rgba(0, 230, 118, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.college {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* === Responsive Breakpoints === */
+
+/* For Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .topRow {
+    gap: 2rem;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 4rem 1rem; /* Reduced padding for mobile */
+  }
+
+  .sectionTitle {
+    font-size: 2.25rem; /* Smaller title for mobile */
+    margin-bottom: 3rem;
+  }
+
+  .topRow {
+    flex-direction: column; /* Stack image and text vertically */
+    gap: 2.5rem;
+  }
+
+  .textWrapper {
+    text-align: center; /* Center bio text on mobile */
+  }
+
+  .links {
+    justify-content: center; /* Center social links */
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .year {
+    margin-top: 0.5rem;
+  }
+}

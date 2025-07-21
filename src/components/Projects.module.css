@@ -1,0 +1,182 @@
+/* src/components/Projects.module.css */
+
+.projectSection {
+  padding: 6rem 0;
+  /* Added a subtle background pattern to make the frost effect visible */
+  background-color: #0d1117;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0px, transparent 50%),
+    radial-gradient(at 98% 1%, hsla(220, 26%, 13%, 1) 0px, transparent 50%);
+  position: relative;
+}
+
+.projectContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #00e676; /* Accent color */
+  border-radius: 2px;
+}
+
+/* Styles for the individual project card - FROSTED GLASS EFFECT */
+.projectCard {
+  /* This is the key for the "frosted glass" effect */
+  background: rgba(22, 27, 34, 0.55); /* Semi-transparent background */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border to catch the light */
+  
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0 1rem; /* Provides spacing between cards in the slider */
+  display: flex !important; /* Important for slick slider */
+  flex-direction: column;
+  height: 580px; /* Fixed height for consistency */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 120px;
+  
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.1);
+}
+
+.projectInfo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows this part to fill the remaining space */
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e6edf3; /* Brighter text for better contrast */
+  margin: 0 0 0.75rem 0;
+}
+
+.projectDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a0aec0; /* Softer grey for readability */
+  flex-grow: 1; /* Pushes the links to the bottom */
+}
+
+/* Tech stack tags */
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.techStack span {
+  background-color: rgba(45, 55, 72, 0.5);
+  color: #c9d1d9;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Links at the bottom of the card */
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto; /* Pushes to the bottom */
+}
+
+.linkButton {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #e6edf3;
+  background-color: rgba(48, 54, 61, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.linkButton:hover {
+  background-color: #00e676;
+  color: #0d1117;
+  border-color: #00e676;
+}
+
+.linkButton i {
+  margin-right: 0.5rem;
+}
+
+/* Slick Slider Customization */
+:global(.slick-dots li button:before) {
+  font-size: 12px;
+  color: #484f58;
+  opacity: 0.8;
+}
+:global(.slick-dots li.slick-active button:before) {
+  color: #00e676;
+}
+:global(.slick-prev:before), :global(.slick-next:before) {
+    font-size: 24px;
+    color: #a0aec0;
+    transition: color 0.3s ease;
+}
+:global(.slick-prev:hover:before), :global(.slick-next:hover:before) {
+    color: #fff;
+}
+
+/* Full Mobile Responsiveness */
+@media (max-width: 768px) {
+  .projectSection {
+    padding: 4rem 0;
+  }
+  .projectCard {
+    margin: 0 0.5rem; /* Reduce margin on mobile */
+    height: auto; /* Let height be determined by content */
+    min-height: 480px;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
