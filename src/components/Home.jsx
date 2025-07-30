@@ -17,7 +17,7 @@ const Home = () => {
         interactive, and user-friendly digital experiences.
       </p>
       <div className="cta-buttons">
-        <a href="/path/to/your/resume.pdf" className="cta-button primary" download>
+        <a href="https://drive.google.com/file/d/1hej3lh5cQT157m9y5eoh2Bt48eHc_-AU/view?usp=sharing" className="cta-button primary" download>
           Download Resume
         </a>
         <a href="#Contact" className="cta-button secondary">
